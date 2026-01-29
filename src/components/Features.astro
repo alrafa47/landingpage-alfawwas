@@ -1,0 +1,155 @@
+---
+const features = [
+  {
+    icon: "verified_user",
+    title: "Sertifikat Halal",
+    description: "Daging pilihan yang disembelih sesuai syariat dengan sertifikasi resmi MUI."
+  },
+  {
+    icon: "restaurant",
+    title: "Menu Higienis",
+    description: "Pengolahan dapur modern dengan standar kebersihan tinggi dan tanpa bau prengus."
+  },
+  {
+    icon: "local_shipping",
+    title: "Gratis Pengiriman",
+    description: "Pengantaran tepat waktu menggunakan armada khusus untuk menjaga kualitas makanan."
+  }
+];
+---
+
+<section class="features">
+  <div class="features-inner">
+    <div class="section-header">
+      <h2 class="section-title text-primary">Keunggulan Layanan Kami</h2>
+      <div class="section-divider">
+        <span class="dot"></span>
+        <span class="line"></span>
+        <span class="dot"></span>
+      </div>
+      <p class="section-description">
+        Kami mengutamakan kualitas, kebersihan, dan kesesuaian syariat dalam setiap layanan yang kami berikan.
+      </p>
+    </div>
+    
+    <div class="features-grid">
+      {features.map((feature) => (
+        <div class="feature-card">
+          <div class="feature-icon">
+            <span class="material-symbols-outlined">{feature.icon}</span>
+          </div>
+          <div class="feature-content">
+            <h3 class="feature-title">{feature.title}</h3>
+            <p class="feature-description">{feature.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .features {
+    padding: 5rem 1.5rem;
+    background: white;
+  }
+  
+  @media (min-width: 1024px) {
+    .features {
+      padding: 5rem 10rem;
+    }
+  }
+  
+  .features-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .section-title {
+    font-size: 1.875rem;
+    margin-bottom: 1rem;
+  }
+  
+  @media (min-width: 1024px) {
+    .section-title {
+      font-size: 2.25rem;
+    }
+  }
+  
+  .section-description {
+    color: var(--color-text-secondary);
+    font-size: 1.125rem;
+    max-width: 700px;
+    margin: 1rem auto 0;
+  }
+  
+  .features-grid {
+    display: grid;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .features-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .feature-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid #e5e5e5;
+    background: var(--color-background);
+    transition: all 0.3s ease;
+  }
+  
+  .feature-card:hover {
+    box-shadow: 0 20px 40px rgba(45, 70, 54, 0.08);
+    border-color: rgba(45, 70, 54, 0.3);
+  }
+  
+  .feature-card:hover .feature-icon {
+    background: var(--color-primary);
+    color: white;
+  }
+  
+  .feature-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 0.75rem;
+    background: rgba(45, 70, 54, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    transition: all 0.3s ease;
+  }
+  
+  .feature-icon .material-symbols-outlined {
+    font-size: 1.75rem;
+  }
+  
+  .feature-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .feature-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text);
+  }
+  
+  .feature-description {
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+  }
+</style>

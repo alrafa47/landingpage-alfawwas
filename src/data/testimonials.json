@@ -1,0 +1,95 @@
+{
+    "sectionTitle": "Review Pelanggan",
+    "sectionSubtitle": "Apa Kata Ayah & Bunda?",
+    "sectionDescription": "Ribuan keluarga telah mempercayakan momen aqiqah buah hati mereka kepada kami. Inilah bukti kepuasan mereka.",
+    "whatsappTestimonials": [
+        {
+            "id": 1,
+            "name": "Bunda Sarah",
+            "location": "-",
+            "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuBsyuznN-LPLAcdr0KXHPkwHYbNEh_hGYVkLti31oVaUpYzQoiuSnMbeZO1oBO-noe4C72nfeWK5lbdKo94NtdqM4XpHwNxE3oUIQmK2ufjlZSLlzTjmCVwcnVjqhMDolKe-5V4nr3pc5Masn0HDptQrcbWJHdoGMFHVtGouEsSWVXZy89S4tpp5MEHGLz5YhIto-Jr4bIf0dZ04Bbh0E2qlfpER-qoKxlsvVk0fbZp-vU0RHKpKuQ_UdF5lK2XDi5H8FeulA1H",
+            "messages": [
+                {
+                    "type": "received",
+                    "text": "Assalammualaikum min, mau kasih kabar. Masakannya enak banget! Satenya empuk, gule nya nggak bau prengus sama sekali 👍",
+                    "time": "10:45"
+                },
+                {
+                    "type": "received",
+                    "text": "Tamu-tamu pada nanyain pesen dimana. Makasih ya bantuannya buat acara anak saya.",
+                    "time": "10:46"
+                },
+                {
+                    "type": "sent",
+                    "text": "Waalaikumsalam Bunda Sarah, Alhamdulillah kalau suka. Terima kasih kembali sudah mempercayakan kami 🙏",
+                    "time": "11:02"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Ayah Budi",
+            "location": "-",
+            "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuBNXGZGH4nXQG9-lmsLl8-zfqxhC2vFkXvEYOi_8K0cILDOTkHCrasvCJ3KLhBdpQsX45alcE3ojpdkBHac9RBm5ftRDm1s_bBrrpRWU0PgrUUIyfMZkTwc8OBL-fJ0tzPBkCEiTbEw9pvzSBPKIYn66mHADNd4-Ed-OVSRGF50Z6v0O3kZt57ty_8clb_Sbj1rONoEctgPbLEd3pABYDmFH85-gRjKp0fCLeSluWO5vrC4xkCPU0SDA9qA9U1NRTnvCk91M82A",
+            "hasImage": true,
+            "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuBaYAZa3IhDZY4aarBfYSFlPvEbgI2cBiWIhImz_nVCT29gupKXFBh41gnGpodObv0577Z0BGIKP-vpGvkFtfeDHckIpbIqvg4l9Kmw2gI5_9Df90LC3eqyPlHJoG6MshYNROMbfegTfnH1jg7VPBDbFM19xGNue7XWaCcB0NoO8cTNqrEQlCmx92ksH9xvEW2Rf_J0PHCv-GcC432-HhDv5iZIX5d9cuLoCzBTwgpOuliVHaA4-ZOW2LX_PX2py3Ag9PF3apV4",
+            "messages": [
+                {
+                    "type": "received",
+                    "text": "Alhamdulillah sampai tepat waktu jam 9 pagi tadi. Packingnya rapih banget, eksklusif.",
+                    "time": "09:15",
+                    "hasImage": true
+                },
+                {
+                    "type": "sent",
+                    "text": "Sama-sama Ayah Budi, semoga berkah acaranya ya Pak.",
+                    "time": "09:20"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Ibu Fitri",
+            "location": "-",
+            "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuAqv1DU5yRdiVRERugVX4LHv_h998ojPcvDqD0Gih8k-CZyDKdxDVWbkNXxKcP8mRN5_ZmxEvHbUTtRCZZaaRRxcSqz3MsBS_zbDG60a14Z1X83iF5Y7sNwNgd36gQb2a2GXQXJnDPXAVtZUleqsZb5snBgbE4OYv023p546ZayigdSpFHCulYO-0zqdGQ-5vmtQbmNXkRwCD79xLxQ23OkEeZkDUqpxzZT0XhIGhkZr-feqXqEZvMEZIetobQ03YXbxRexq1ll",
+            "messages": [
+                {
+                    "type": "received",
+                    "text": "Mantap min! Porsinya melimpah. Tadinya takut kurang, eh ternyata malah sisa banyak bisa bagi ke tetangga lagi.",
+                    "time": "13:30"
+                },
+                {
+                    "type": "received",
+                    "text": "Next bakal order lagi buat aqiqah adeknya hehe. Recommended bgt!",
+                    "time": "13:31"
+                }
+            ]
+        }
+    ],
+    "videoTestimonials": [
+        {
+            "id": 1,
+            "title": "Proses Memasak Higienis & Sesuai Syariat",
+            "thumbnail": "https://lh3.googleusercontent.com/aida-public/AB6AXuDEDeUA62ADjJgu9S5B7vwH7TqNsmxQ9z8JUh3pvS1yJq2-JPy-ATTjT65j1dRu7Ha7z79D6r42qiZQ5JwSYzdcOUFtwXpPKIrfXhpftvoOuLMztsPZxl3LojN90dmf350PBY_BR-2_lwbLsl8v8WMlTM6SuIdDhW2btUYHob0OZJy2l9_yHtjAqlpOPFZ8lj5nVHvplJ3CnmbosY_s_2muxT40SzxRdsSQBfNu71QeWTtC7WMIESQX4aFAUP_vo_ob8DMou1jQ",
+            "views": "12.4K"
+        },
+        {
+            "id": 2,
+            "title": "Pengiriman Tepat Waktu ke Seluruh Jabodetabek",
+            "thumbnail": "https://lh3.googleusercontent.com/aida-public/AB6AXuCtdRF0Li6EcIiRd74pRSHBy0XxBChuXSZRvqdSs2D2a1bBljWyd7TkhOIk3076VI1Dj1Z5fu5cioZ7yNImCICVK4sTLJTq0Sk2D6IQkUEaCgziWXq7BCYULzXf7pQHFvIo5TIzH2BiETBpeDPSK9Wr9H_ybLFoVGp4mxsA4IAgltJXhtiTCFHNFFoiEyDNF4n_LscQAYTs3zw7qApRhGRPxyS2obHXnjW0hTVBApFeWBM3OPUmIXeF5Pz0JBtexY0aJLbp8Y5w",
+            "views": "8.2K"
+        },
+        {
+            "id": 3,
+            "title": "Pemilihan Hewan Aqiqah Terbaik & Sehat",
+            "thumbnail": "https://lh3.googleusercontent.com/aida-public/AB6AXuCZlWr16tmB7Qg-slLdpuej6WcyALKpk831HrtEbudsKpAK7Guuz9R_b7ej27f4tLvicfS_a8pi44BkbUH4BjtspLUErlUioWulsRkZ7s1DPVkch-lOrtB2JS7iYfnQBwXN0sVXRd2k57kdGy_Pzlb_9STPXiMs_Co1iAylhWRcPrYFs3vGYVNbK0NWFYeVgAXsz0E9kBWe0YIJZUcZvfpuAr593_kGIphbDhXKXBPKDYO84-MvSEAkIwJUs94VdC0Ur-5ZrUQr",
+            "views": "15.9K"
+        },
+        {
+            "id": 4,
+            "title": "Wajah Bahagia Orang Tua Saat Terima Pesanan",
+            "thumbnail": "https://lh3.googleusercontent.com/aida-public/AB6AXuB0yW97s8QiB-jSq4f6E2hSKgyGFZbluWEsf4k2uGbC8899LwU60Qoyxa08u5zpSAbbRCSVw6GT6pnUvGnsCtmnoSW9suiww_lXQrYFosW0VGsjTk4S2lFg_4HXHctPk71SzXqt3GEkgoh3KOxgKOI6kXPF8kaiPR_k7Z_gcOM__VuP38CUyG76Y6oM30EP9uGzCcNKD5R-jOEPWeU8X8u7F7nRBIAFWqy8WNYGWEYWPTpXxkAZGPUleffU0uC0yINtM0UkWspa",
+            "views": "21.1K"
+        }
+    ]
+}

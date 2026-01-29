@@ -1,0 +1,694 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Testimonials from '../components/Testimonials.astro';
+import Footer from '../components/Footer.astro';
+import testimonialsData from '../data/testimonials.json';
+import site from '../data/site.json';
+
+// Expanded testimonials for the dedicated page
+const moreWhatsAppTestimonials = [
+  ...testimonialsData.whatsappTestimonials,
+  {
+    id: 4,
+    name: "Ibu Ratna",
+    location: "Bogor",
+    avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuBsyuznN-LPLAcdr0KXHPkwHYbNEh_hGYVkLti31oVaUpYzQoiuSnMbeZO1oBO-noe4C72nfeWK5lbdKo94NtdqM4XpHwNxE3oUIQmK2ufjlZSLlzTjmCVwcnVjqhMDolKe-5V4nr3pc5Masn0HDptQrcbWJHdoGMFHVtGouEsSWVXZy89S4tpp5MEHGLz5YhIto-Jr4bIf0dZ04Bbh0E2qlfpER-qoKxlsvVk0fbZp-vU0RHKpKuQ_UdF5lK2XDi5H8FeulA1H",
+    messages: [
+      { type: "received", text: "Nasinya wangi banget, ayahnya sampe nambah 2x. Kami pesan paket Silver dan sangat puas dengan hasilnya 👍", time: "14:22" },
+      { type: "sent", text: "Alhamdulillah Ibu Ratna, terima kasih atas kepercayaannya. Semoga selalu diberi keberkahan ya Bu 🙏", time: "14:30" }
+    ]
+  },
+  {
+    id: 5,
+    name: "Bpk. Andi",
+    location: "Jakarta Selatan",
+    avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuBNXGZGH4nXQG9-lmsLl8-zfqxhC2vFkXvEYOi_8K0cILDOTkHCrasvCJ3KLhBdpQsX45alcE3ojpdkBHac9RBm5ftRDm1s_bBrrpRWU0PgrUUIyfMZkTwc8OBL-fJ0tzPBkCEiTbEw9pvzSBPKIYn66mHADNd4-Ed-OVSRGF50Z6v0O3kZt57ty_8clb_Sbj1rONoEctgPbLEd3pABYDmFH85-gRjKp0fCLeSluWO5vrC4xkCPU0SDA9qA9U1NRTnvCk91M82A",
+    messages: [
+      { type: "received", text: "Pesan paket Gold untuk aqiqah anak kedua. Dokumentasinya keren, pakai drone juga! Pokoknya top deh", time: "16:45" },
+      { type: "received", text: "Tahun depan kalau ada anak lagi pasti order lg disini 😄", time: "16:46" },
+      { type: "sent", text: "Aamiin, terima kasih Pak Andi. Kami tunggu orderan berikutnya 🙏", time: "17:02" }
+    ]
+  },
+  {
+    id: 6,
+    name: "Bunda Nur",
+    location: "Cikarang",
+    avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuAqv1DU5yRdiVRERugVX4LHv_h998ojPcvDqD0Gih8k-CZyDKdxDVWbkNXxKcP8mRN5_ZmxEvHbUTtRCZZaaRRxcSqz3MsBS_zbDG60a14Z1X83iF5Y7sNwNgd36gQb2a2GXQXJnDPXAVtZUleqsZb5snBgbE4OYv023p546ZayigdSpHCulYO-0zqdGQ-5vmtQbmNXkRwCD79xLxQ23OkEeZkDUqpxzZT0XhIGhkZr-feqXqEZvMEZIetobQ03YXbxRexq1ll",
+    messages: [
+      { type: "received", text: "Anterin jauh ke Cikarang tapi tetap tepat waktu. Salut sama pelayanannya! 🙏", time: "08:30" },
+      { type: "sent", text: "Terima kasih Bunda, doa terbaik untuk keluarga 🙏", time: "08:45" }
+    ]
+  }
+];
+
+const moreTikTokVideos = [
+  ...testimonialsData.videoTestimonials,
+  {
+    id: 5,
+    title: "Review Paket Silver Oleh Customer",
+    thumbnail: "https://lh3.googleusercontent.com/aida-public/AB6AXuDEDeUA62ADjJgu9S5B7vwH7TqNsmxQ9z8JUh3pvS1yJq2-JPy-ATTjT65j1dRu7Ha7z79D6r42qiZQ5JwSYzdcOUFtwXpPKIrfXhpftvoOuLMztsPZxl3LojN90dmf350PBY_BR-2_lwbLsl8v8WMlTM6SuIdDhW2btUYHob0OZJy2l9_yHtjAqlpOPFZ8lj5nVHvplJ3CnmbosY_s_2muxT40SzxRdsSQBfNu71QeWTtC7WMIESQX4aFAUP_vo_ob8DMou1jQ",
+    views: "18.7K"
+  },
+  {
+    id: 6,
+    title: "Packing Rapi Anti Bocor",
+    thumbnail: "https://lh3.googleusercontent.com/aida-public/AB6AXuCtdRF0Li6EcIiRd74pRSHBy0XxBChuXSZRvqdSs2D2a1bBljWyd7TkhOIk3076VI1Dj1Z5fu5cioZ7yNImCICVK4sTLJTq0Sk2D6IQkUEaCgziWXq7BCYULzXf7pQHFvIo5TIzH2BiETBpeDPSK9Wr9H_ybLFoVGp4mxsA4IAgltJXhtiTCFHNFFoiEyDNF4n_LscQAYTs3zw7qApRhGRPxyS2obHXnjW0hTVBApFeWBM3OPUmIXeF5Pz0JBtexY0aJLbp8Y5w",
+    views: "9.3K"
+  },
+  {
+    id: 7,
+    title: "Momen Aqiqah Keluarga",
+    thumbnail: "https://lh3.googleusercontent.com/aida-public/AB6AXuCZlWr16tmB7Qg-slLdpuej6WcyALKpk831HrtEbudsKpAK7Guuz9R_b7ej27f4tLvicfS_a8pi44BkbUH4BjtspLUErlUioWulsRkZ7s1DPVkch-lOrtB2JS7iYfnQBwXN0sVXRd2k57kdGy_Pzlb_9STPXiMs_Co1iAylhWRcPrYFs3vGYVNbK0NWFYeVgAXsz0E9kBWe0YIJZUcZvfpuAr593_kGIphbDhXKXBPKDYO84-MvSEAkIwJUs94VdC0Ur-5ZrUQr",
+    views: "25.4K"
+  },
+  {
+    id: 8,
+    title: "Keseruan Tim Kami di Dapur",
+    thumbnail: "https://lh3.googleusercontent.com/aida-public/AB6AXuB0yW97s8QiB-jSq4f6E2hSKgyGFZbluWEsf4k2uGbC8899LwU60Qoyxa08u5zpSAbbRCSVw6GT6pnUvGnsCtmnoSW9suiww_lXQrYFosW0VGsjTk4S2lFg_4HXHctPk71SzXqt3GEkgoh3KOxgKOI6kXPF8kaiPR_k7Z_gcOM__VuP38CUyG76Y6oM30EP9uGzCcNKD5R-jOEPWeU8X8u7F7nRBIAFWqy8WNYGWEYWPTpXxkAZGPUleffU0uC0yINtM0UkWspa",
+    views: "31.2K"
+  }
+];
+---
+
+<Layout title="Testimoni - Al-Fawwaz Catering" description="Lihat review dan testimoni pelanggan Al-Fawwaz Catering dari WhatsApp dan TikTok">
+  <Header />
+  <main>
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="badge badge-primary">Real Reviews</span>
+        <h1 class="page-title">Apa Kata <span class="text-gold">Pelanggan</span> Kami?</h1>
+        <p class="page-description">Ribuan keluarga telah mempercayakan momen aqiqah buah hati mereka kepada kami. Inilah bukti kepuasan mereka.</p>
+      </div>
+    </section>
+    
+    <!-- Rating Summary -->
+    <section class="rating-section">
+      <div class="rating-container">
+        <div class="rating-summary">
+          <div class="rating-main">
+            <p class="rating-score">{site.rating.score}</p>
+            <div class="rating-stars">
+              <span class="material-symbols-outlined filled">star</span>
+              <span class="material-symbols-outlined filled">star</span>
+              <span class="material-symbols-outlined filled">star</span>
+              <span class="material-symbols-outlined filled">star</span>
+              <span class="material-symbols-outlined filled">star_half</span>
+            </div>
+            <p class="rating-count">Berdasarkan {site.rating.totalReviews} ulasan</p>
+          </div>
+          
+          <div class="rating-bars">
+            {Object.entries(site.rating.breakdown).reverse().map(([star, percent]) => (
+              <div class="rating-bar">
+                <span class="rating-bar-star">{star}</span>
+                <div class="rating-bar-fill">
+                  <div class="rating-bar-fill-inner" style={`width: ${percent}%`}></div>
+                </div>
+                <span class="rating-bar-percent">{percent}%</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- WhatsApp Testimonials -->
+    <section class="wa-section">
+      <div class="section-container">
+        <div class="section-header">
+          <h2 class="section-title">
+            <span class="material-symbols-outlined wa-icon">chat</span>
+            Review dari WhatsApp
+          </h2>
+          <span class="badge badge-primary">Real Feedbacks</span>
+        </div>
+        
+        <div class="wa-grid">
+          {moreWhatsAppTestimonials.map((testimonial) => (
+            <div class="wa-card">
+              <div class="wa-card-header">
+                <img src={testimonial.avatar} alt={testimonial.name} class="wa-avatar" />
+                <div>
+                  <p class="wa-name">{testimonial.name} - {testimonial.location}</p>
+                  <p class="wa-status">Online</p>
+                </div>
+              </div>
+              
+              <div class="wa-messages">
+                {testimonial.messages.map((msg) => (
+                  <div class={`wa-bubble ${msg.type === 'sent' ? 'wa-bubble-right' : 'wa-bubble-left'}`}>
+                    <p class="wa-message-text">{msg.text}</p>
+                    <p class="wa-time">
+                      {msg.time}
+                      {msg.type === 'sent' && <span class="wa-check"> ✓✓</span>}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+    
+    <!-- TikTok/Video Testimonials -->
+    <section class="video-section">
+      <div class="section-container">
+        <div class="section-header">
+          <h2 class="section-title">
+            <span class="material-symbols-outlined tiktok-icon">videocam</span>
+            Dokumentasi TikTok
+          </h2>
+          <a href={site.socialLinks.tiktok} class="btn btn-secondary" target="_blank" rel="noopener">
+            Lihat di TikTok
+          </a>
+        </div>
+        
+        <div class="video-grid">
+          {moreTikTokVideos.map((video) => (
+            <div class="video-card">
+              <img src={video.thumbnail} alt={video.title} />
+              <div class="video-overlay"></div>
+              <div class="video-play">
+                <div class="video-play-btn">
+                  <span class="material-symbols-outlined">play_arrow</span>
+                </div>
+              </div>
+              <div class="video-info">
+                <p class="video-title">{video.title}</p>
+                <div class="video-views">
+                  <span class="material-symbols-outlined">visibility</span>
+                  <span>{video.views} views</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+    
+    <!-- CTA Banner -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-card">
+          <h2 class="cta-title">Siap Menjadi Bagian dari Keluarga Kami?</h2>
+          <p class="cta-description">Pesan sekarang dan rasakan sendiri kualitas layanan kami.</p>
+          <div class="cta-buttons">
+            <a 
+              href={`https://wa.me/${site.whatsapp}`}
+              class="btn btn-whatsapp"
+              target="_blank"
+              rel="noopener"
+            >
+              Pesan via WhatsApp
+            </a>
+            <a href="/paket" class="btn btn-outline">
+              Lihat Paket
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .page-hero {
+    padding: 5rem 1.5rem 3rem;
+    text-align: center;
+    background: linear-gradient(180deg, var(--color-background) 0%, white 100%);
+  }
+  
+  @media (min-width: 1024px) {
+    .page-hero {
+      padding: 6rem 10rem 4rem;
+    }
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .section-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  
+  @media (min-width: 1024px) {
+    .section-container {
+      padding: 0 10rem;
+    }
+  }
+  
+  .page-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--color-primary);
+    margin: 1rem 0;
+    letter-spacing: -0.02em;
+  }
+  
+  @media (min-width: 1024px) {
+    .page-title {
+      font-size: 3.5rem;
+    }
+  }
+  
+  .page-description {
+    font-size: 1.125rem;
+    color: var(--color-text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+  
+  /* Rating Section */
+  .rating-section {
+    padding: 0 1.5rem 4rem;
+  }
+  
+  @media (min-width: 1024px) {
+    .rating-section {
+      padding: 0 10rem 4rem;
+    }
+  }
+  
+  .rating-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .rating-summary {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e5e5e5;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+  }
+  
+  .rating-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .rating-score {
+    font-size: 3.75rem;
+    font-weight: 900;
+    color: var(--color-text);
+    letter-spacing: -0.02em;
+  }
+  
+  .rating-stars {
+    display: flex;
+    gap: 0.25rem;
+    color: var(--color-primary);
+  }
+  
+  .rating-stars .filled {
+    font-variation-settings: 'FILL' 1;
+  }
+  
+  .rating-count {
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    font-weight: 500;
+  }
+  
+  .rating-bars {
+    min-width: 280px;
+    max-width: 450px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .rating-bar {
+    display: grid;
+    grid-template-columns: 1.5rem 1fr 3rem;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .rating-bar-star {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-text);
+  }
+  
+  .rating-bar-fill {
+    height: 0.75rem;
+    background: #e5e5e5;
+    border-radius: 9999px;
+    overflow: hidden;
+  }
+  
+  .rating-bar-fill-inner {
+    height: 100%;
+    background: var(--color-primary);
+    border-radius: 9999px;
+  }
+  
+  .rating-bar-percent {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-text-secondary);
+    text-align: right;
+  }
+  
+  /* Section Headers */
+  .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+  
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+  }
+  
+  .wa-icon {
+    color: #25D366;
+  }
+  
+  .tiktok-icon {
+    color: #ec4899;
+  }
+  
+  /* WhatsApp Section */
+  .wa-section {
+    padding: 3rem 0;
+    background: var(--color-background);
+  }
+  
+  .wa-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+  
+  @media (min-width: 640px) {
+    .wa-grid {
+      gap: 1.5rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .wa-grid {
+      gap: 2rem;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .wa-card {
+    background: #e5ddd5;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #d5d5d5;
+    transition: transform 0.2s ease;
+  }
+  
+  .wa-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .wa-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 0.75rem;
+  }
+  
+  .wa-avatar {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 9999px;
+    object-fit: cover;
+  }
+  
+  @media (min-width: 640px) {
+    .wa-avatar {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
+  
+  .wa-name {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #333;
+  }
+  
+  .wa-status {
+    font-size: 0.625rem;
+    color: #666;
+  }
+  
+  .wa-messages {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .wa-bubble {
+    padding: 0.75rem;
+    max-width: 85%;
+    font-size: 0.875rem;
+    box-shadow: 0 1px 0.5px rgba(0, 0, 0, 0.13);
+  }
+  
+  .wa-bubble-left {
+    background: white;
+    border-radius: 0 12px 12px 12px;
+    color: #333;
+  }
+  
+  .wa-bubble-right {
+    background: #dcf8c6;
+    border-radius: 12px 0 12px 12px;
+    margin-left: auto;
+    color: #333;
+  }
+  
+  .wa-message-text {
+    line-height: 1.5;
+  }
+  
+  .wa-time {
+    font-size: 0.5625rem;
+    color: #666;
+    text-align: right;
+    margin-top: 0.25rem;
+  }
+  
+  .wa-check {
+    color: #53bdeb;
+  }
+  
+  /* Video Section */
+  .video-section {
+    padding: 4rem 0;
+    background: white;
+  }
+  
+  .video-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (min-width: 640px) {
+    .video-grid {
+      gap: 1.25rem;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .video-grid {
+      gap: 1.5rem;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  .video-card {
+    position: relative;
+    aspect-ratio: 9/12;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  @media (min-width: 640px) {
+    .video-card {
+      aspect-ratio: 9/14;
+      border-radius: 1rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+  }
+  
+  .video-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .video-card:hover img {
+    transform: scale(1.1);
+  }
+  
+  .video-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent, transparent);
+  }
+  
+  .video-play {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .video-card:hover .video-play {
+    opacity: 1;
+  }
+  
+  .video-play-btn {
+    width: 4rem;
+    height: 4rem;
+    background: var(--color-primary);
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  .video-play-btn .material-symbols-outlined {
+    font-size: 2rem;
+  }
+  
+  .video-info {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    color: white;
+  }
+  
+  .video-title {
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+  
+  .video-views {
+    font-size: 0.625rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .video-views .material-symbols-outlined {
+    font-size: 0.75rem;
+  }
+  
+  /* CTA Section */
+  .cta-section {
+    padding: 4rem 1.5rem 6rem;
+    background: var(--color-background);
+  }
+  
+  @media (min-width: 1024px) {
+    .cta-section {
+      padding: 4rem 10rem 6rem;
+    }
+  }
+  
+  .cta-card {
+    background: var(--color-primary);
+    border-radius: 2rem;
+    padding: 3rem 2rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  @media (min-width: 768px) {
+    .cta-card {
+      padding: 4rem;
+    }
+  }
+  
+  .cta-title {
+    font-size: 1.75rem;
+    color: white;
+    margin-bottom: 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    .cta-title {
+      font-size: 2.25rem;
+    }
+  }
+  
+  .cta-description {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  @media (min-width: 640px) {
+    .cta-buttons {
+      flex-direction: row;
+    }
+  }
+  
+  .btn-outline {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 1rem 2rem;
+  }
+  
+  .btn-outline:hover {
+    background: white;
+    color: var(--color-primary);
+  }
+</style>

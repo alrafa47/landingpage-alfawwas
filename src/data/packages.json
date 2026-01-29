@@ -1,0 +1,67 @@
+{
+    "sectionTitle": "Pilihan Paket Aqiqah",
+    "sectionDescription": "Pilih paket yang sesuai dengan kebutuhan Anda. Semua paket sudah termasuk biaya masak dan sertifikat.",
+    "notes": [
+        "* Harga Per 1 Ekor Kambing",
+        "* Harga sewaktu-waktu dapat berubah"
+    ],
+    "packages": [
+        {
+            "id": "biasa",
+            "name": "Biasa",
+            "price": "Rp 1.950.000",
+            "priceUnit": "/ ekor",
+            "isPopular": false,
+            "features": [
+                "250 Tusuk Sate",
+                "60 Porsi Gule",
+                "Penyembelihan Syar'i",
+                "Sertifikat Aqiqah"
+            ],
+            "buttonText": "Pilih Biasa"
+        },
+        {
+            "id": "ekonomi",
+            "name": "Ekonomi",
+            "price": "Rp 2.250.000",
+            "priceUnit": "/ ekor",
+            "isPopular": true,
+            "popularLabel": "Paling Populer",
+            "features": [
+                "350 Tusuk Sate",
+                "75 Porsi Gule",
+                "Penyembelihan Syar'i",
+                "Sertifikat Aqiqah"
+            ],
+            "buttonText": "Pilih Ekonomi"
+        },
+        {
+            "id": "spesial",
+            "name": "Spesial",
+            "price": "Rp 2.700.000",
+            "priceUnit": "/ ekor",
+            "isPopular": false,
+            "features": [
+                "450 Tusuk Sate",
+                "100 Porsi Gule",
+                "Penyembelihan Syar'i",
+                "Sertifikat Aqiqah"
+            ],
+            "buttonText": "Pilih Spesial"
+        },
+        {
+            "id": "super",
+            "name": "Super",
+            "price": "Rp 3.300.000",
+            "priceUnit": "/ ekor",
+            "isPopular": false,
+            "features": [
+                "600 Tusuk Sate",
+                "125 Porsi Gule",
+                "Penyembelihan Syar'i",
+                "Sertifikat Aqiqah"
+            ],
+            "buttonText": "Pilih Super"
+        }
+    ]
+}

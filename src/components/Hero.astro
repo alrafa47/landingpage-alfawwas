@@ -1,0 +1,210 @@
+---
+import site from '../data/site.json';
+---
+
+<section id="beranda" class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <span class="badge badge-primary">{site.tagline}</span>
+      
+      <h1 class="hero-title">
+        Rayakan Momen Berkah <span class="text-gold">Aqiqah</span> Buah Hati Anda
+      </h1>
+      
+      <p class="hero-description">
+        {site.description}
+      </p>
+      
+      <div class="hero-buttons">
+        <a href="#paket" class="btn btn-primary">Lihat Paket</a>
+        <a href={`https://wa.me/${site.whatsapp}`} class="btn btn-secondary" target="_blank" rel="noopener">
+          Konsultasi Gratis
+        </a>
+      </div>
+      
+      <div class="hero-trust">
+        <div class="avatar-stack">
+          <div class="avatar">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJBQUqjQLp4I65psR-IEB4_gN8VkOoiOnPXCY76A_4ESRiNUkjR88dsGEhFn2mKKRiRLpDWzF7-FPzwB3crLckxJTx5GcjgMuCEpd5YaQhYdYm4mLm1RORMs9IpsDdP7elqUmicyfjEpvNw2oyxO3nFejpatOniLr2ybYyQp1Xgh3VmTn6zJOq7k3JpUl4QTkuopJhhOL3TtB-D6Uaf6SRuoGfr_fCF_PtrL4QCidboiRSBRwOeaCv-0ASbE4RdoZHw1MLziqi" alt="Client" />
+          </div>
+          <div class="avatar">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhsRBRQ0rbXqcx3s1X2Y3DvX2vrOaqEnF85aYjk-d2Ae33ElRI6lG45-I4-XO7qbDjBQx0aCT-UdVWYeVZn0DHDZSVmbbochmBFEyC3nzEDw0MZOTjptM6_7d0lkukWjDsD6z6Vo-0fCWy-tOrHWT5VCJao0UXNTFxFUmdgOAd27nCZpnAJh69lTPbJfSMA1JVfoXfmffSQHtDWOcR4W0xXeYn5KfN3HB6jilrFAUgsJ8cwO7PHKdqlD3b6MAgzPuU_hgtKTzJ" alt="Client" />
+          </div>
+          <div class="avatar avatar-count">
+            <span>{site.trustedBy}</span>
+          </div>
+        </div>
+        <p class="trust-text">
+          Telah dipercaya oleh <strong>{site.trustedBy} Keluarga</strong>
+        </p>
+      </div>
+    </div>
+    
+    <div class="hero-image-wrapper">
+      <div class="blur-orb blur-orb-gold orb-1"></div>
+      <div class="blur-orb blur-orb-green orb-2"></div>
+      <div class="hero-image">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQ9ixWxvK-syt_S62Xlrrawv5qJpbrw855cuv9nrcHsFzQCeckvArGjlymU-GpQ6LJHcvpjp4LMP9aH8IlevW6rxbttSTZGrBRA2rGzV6x7sNdK4r9rSLtM9XtzDTekCsjy4wcB1KIiU5z5MyLumqMsTdChyCUAskpRseOklZsdx728SXKmObg7mLUdDGTVDe2mn_ZnMB1G2-68_VlLTIX5w4VBP_E0eY9gFM_oKxiXnljA6YiBT0ZwwMKXnUiK_vsqREqWis2" alt="Delicious Aqiqah food" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    padding: 3rem 1.5rem 5rem;
+  }
+  
+  @media (min-width: 1024px) {
+    .hero {
+      padding: 5rem 10rem;
+    }
+  }
+  
+  .hero-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+  }
+  
+  @media (min-width: 1024px) {
+    .hero-inner {
+      flex-direction: row;
+    }
+  }
+  
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex: 1;
+  }
+  
+  @media (min-width: 1024px) {
+    .hero-content {
+      gap: 2rem;
+    }
+  }
+  
+  .hero-title {
+    font-size: 2.25rem;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--color-primary);
+  }
+  
+  @media (min-width: 1024px) {
+    .hero-title {
+      font-size: 3.5rem;
+    }
+  }
+  
+  .hero-description {
+    font-size: 1.125rem;
+    color: var(--color-text-secondary);
+    max-width: 500px;
+    line-height: 1.7;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .hero-trust {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e5e5e5;
+  }
+  
+  .avatar-stack {
+    display: flex;
+    margin-left: 0.75rem;
+  }
+  
+  .avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 9999px;
+    border: 2px solid white;
+    margin-left: -0.75rem;
+    overflow: hidden;
+    background: #e5e5e5;
+  }
+  
+  .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .avatar-count {
+    background: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .avatar-count span {
+    color: white;
+    font-size: 0.625rem;
+    font-weight: 700;
+  }
+  
+  .trust-text {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+  }
+  
+  .trust-text strong {
+    color: var(--color-primary);
+  }
+  
+  .hero-image-wrapper {
+    position: relative;
+    width: 100%;
+    flex: 1;
+  }
+  
+  .orb-1 {
+    width: 6rem;
+    height: 6rem;
+    top: -1.5rem;
+    left: -1.5rem;
+  }
+  
+  .orb-2 {
+    width: 10rem;
+    height: 10rem;
+    bottom: -2.5rem;
+    right: -2.5rem;
+  }
+  
+  .hero-image {
+    position: relative;
+    z-index: 10;
+    aspect-ratio: 1;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+  
+  @media (min-width: 1024px) {
+    .hero-image {
+      aspect-ratio: 4/3;
+    }
+  }
+  
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+</style>

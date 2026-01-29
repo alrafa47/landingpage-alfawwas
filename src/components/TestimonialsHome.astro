@@ -1,0 +1,201 @@
+---
+/**
+ * Simplified testimonials section for homepage
+ * Based on ui/home/screen.png reference
+ */
+import testimonialsData from '../data/testimonials.json';
+import site from '../data/site.json';
+
+const featuredTestimonials = testimonialsData.whatsappTestimonials.slice(0, 3);
+---
+
+<section id="testimoni" class="testimonials-home">
+  <div class="testimonials-inner">
+    <div class="section-header">
+      <span class="section-label">Testimonial</span>
+      <h2 class="section-title">Apa Kata Mereka <span class="text-gold">Tentang Kami?</span></h2>
+      <p class="section-description">
+        Ribuan keluarga telah mempercayakan momen aqiqah buah hati mereka kepada kami.
+      </p>
+    </div>
+    
+    <div class="testimonials-grid">
+      {featuredTestimonials.map((testimonial) => (
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <img src={testimonial.avatar} alt={testimonial.name} class="testimonial-avatar" />
+            <div class="testimonial-info">
+              <p class="testimonial-name">{testimonial.name}</p>
+              <p class="testimonial-location">{testimonial.location}</p>
+            </div>
+            <div class="testimonial-rating">
+              <span class="material-symbols-outlined star-filled">star</span>
+              <span class="material-symbols-outlined star-filled">star</span>
+              <span class="material-symbols-outlined star-filled">star</span>
+              <span class="material-symbols-outlined star-filled">star</span>
+              <span class="material-symbols-outlined star-filled">star</span>
+            </div>
+          </div>
+          <p class="testimonial-text">
+            "{testimonial.messages[0].text}"
+          </p>
+        </div>
+      ))}
+    </div>
+    
+    <div class="testimonials-cta">
+      <a href="/testimoni" class="btn btn-secondary">
+        Lihat Semua Testimoni
+        <span class="material-symbols-outlined">arrow_forward</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonials-home {
+    padding: 5rem 1.5rem;
+    background: var(--color-background);
+  }
+  
+  @media (min-width: 1024px) {
+    .testimonials-home {
+      padding: 6rem 10rem;
+    }
+  }
+  
+  .testimonials-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .section-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+  }
+  
+  @media (min-width: 1024px) {
+    .section-title {
+      font-size: 2.5rem;
+    }
+  }
+  
+  .section-description {
+    color: var(--color-text-secondary);
+    font-size: 1.125rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .testimonials-grid {
+    display: grid;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .testimonials-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .testimonial-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .testimonial-card:hover {
+    box-shadow: 0 15px 30px rgba(45, 70, 54, 0.1);
+    transform: translateY(-5px);
+  }
+  
+  .testimonial-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .testimonial-avatar {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 9999px;
+    object-fit: cover;
+  }
+  
+  .testimonial-info {
+    flex: 1;
+  }
+  
+  .testimonial-name {
+    font-weight: 700;
+    font-size: 0.9375rem;
+    color: var(--color-text);
+  }
+  
+  .testimonial-location {
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+  }
+  
+  .testimonial-rating {
+    display: flex;
+    gap: 0.125rem;
+  }
+  
+  .star-filled {
+    font-size: 0.875rem;
+    color: var(--color-gold);
+    font-variation-settings: 'FILL' 1;
+  }
+  
+  .testimonial-text {
+    font-size: 0.9375rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    font-style: italic;
+  }
+  
+  .testimonials-cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+  
+  .testimonials-cta .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .testimonials-cta .material-symbols-outlined {
+    font-size: 1.25rem;
+    transition: transform 0.2s ease;
+  }
+  
+  .testimonials-cta .btn:hover .material-symbols-outlined {
+    transform: translateX(4px);
+  }
+</style>

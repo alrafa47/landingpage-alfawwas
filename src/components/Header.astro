@@ -1,0 +1,225 @@
+---
+import site from '../data/site.json';
+---
+
+<header class="header">
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <img src="/images/alfawwaz-logo.png" alt={site.name} class="logo-img" />
+      <span class="logo-text">{site.name}</span>
+    </a>
+    
+    <nav class="nav-desktop">
+      <a href="/" class="nav-link">Home</a>
+      <a href="/paket" class="nav-link">Paket</a>
+      <a href="/testimoni" class="nav-link">Testimoni</a>
+    </nav>
+    
+    <a href={`https://wa.me/${site.whatsapp}`} class="btn btn-primary header-cta" target="_blank" rel="noopener">
+      <span>Pesan Sekarang</span>
+    </a>
+    
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <span class="material-symbols-outlined menu-icon">menu</span>
+      <span class="material-symbols-outlined close-icon">close</span>
+    </button>
+  </div>
+  
+  <!-- Mobile Menu -->
+  <nav class="nav-mobile" id="mobileMenu">
+    <a href="/" class="nav-mobile-link">Home</a>
+    <a href="/paket" class="nav-mobile-link">Paket</a>
+    <a href="/testimoni" class="nav-mobile-link">Testimoni</a>
+    <a href={`https://wa.me/${site.whatsapp}`} class="btn btn-whatsapp nav-mobile-cta" target="_blank" rel="noopener">
+      <svg class="wa-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" fill="currentColor"/>
+      </svg>
+      Pesan via WhatsApp
+    </a>
+  </nav>
+</header>
+
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const header = document.querySelector('.header');
+  
+  menuToggle?.addEventListener('click', () => {
+    header?.classList.toggle('menu-open');
+  });
+  
+  // Close menu when clicking a link
+  document.querySelectorAll('.nav-mobile-link').forEach(link => {
+    link.addEventListener('click', () => {
+      header?.classList.remove('menu-open');
+    });
+  });
+</script>
+
+<style>
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #e5eadd;
+  }
+  
+  .header-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  @media (min-width: 1024px) {
+    .header-inner {
+      padding: 1rem 10rem;
+    }
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .logo-img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    object-fit: cover;
+  }
+  
+  .logo-text {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    letter-spacing: -0.01em;
+  }
+  
+  .nav-desktop {
+    display: none;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .nav-desktop {
+      display: flex;
+    }
+  }
+  
+  .nav-link {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-text);
+    transition: color 0.2s ease;
+  }
+  
+  .nav-link:hover {
+    color: var(--color-primary);
+  }
+  
+  .header-cta {
+    display: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+  }
+  
+  @media (min-width: 768px) {
+    .header-cta {
+      display: inline-flex;
+    }
+  }
+  
+  /* Menu Toggle Button */
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    background: var(--color-background);
+    border: 1px solid #e5eadd;
+  }
+  
+  @media (min-width: 768px) {
+    .menu-toggle {
+      display: none;
+    }
+  }
+  
+  .menu-toggle .material-symbols-outlined {
+    font-size: 1.5rem;
+  }
+  
+  .menu-toggle .close-icon {
+    display: none;
+  }
+  
+  .header.menu-open .menu-toggle .menu-icon {
+    display: none;
+  }
+  
+  .header.menu-open .menu-toggle .close-icon {
+    display: block;
+  }
+  
+  /* Mobile Menu */
+  .nav-mobile {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem 1.5rem;
+    background: white;
+    border-top: 1px solid #e5eadd;
+  }
+  
+  @media (min-width: 768px) {
+    .nav-mobile {
+      display: none !important;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .header.menu-open .nav-mobile {
+      display: flex;
+    }
+  }
+  
+  .nav-mobile-link {
+    display: block;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text);
+    border-radius: 0.75rem;
+    transition: all 0.2s ease;
+  }
+  
+  .nav-mobile-link:hover {
+    background: var(--color-background);
+    color: var(--color-primary);
+  }
+  
+  .nav-mobile-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    padding: 1rem;
+  }
+  
+  .wa-icon {
+    flex-shrink: 0;
+  }
+</style>

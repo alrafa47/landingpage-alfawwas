@@ -1,0 +1,80 @@
+{
+    "sectionTitle": "Pilihan Menu Tambahan",
+    "sectionSubtitle": "Sesuaikan menu pilihan anda sesuai selera",
+    "categories": [
+        {
+            "name": "Lauk Utama",
+            "items": [
+                {
+                    "name": "Ayam Kecap",
+                    "price": "Rp. 8.000"
+                },
+                {
+                    "name": "Ayam Kare",
+                    "price": "Rp. 8.000"
+                },
+                {
+                    "name": "Ayam Krispi",
+                    "price": "Rp. 8.000"
+                },
+                {
+                    "name": "Ayam Goreng",
+                    "price": "Rp. 8.000"
+                },
+                {
+                    "name": "Ayam Bakar",
+                    "price": "Rp. 9.000"
+                },
+                {
+                    "name": "Sate Ayam/Tusuk",
+                    "price": "Rp. 2.500"
+                },
+                {
+                    "name": "Kengsengan Sapi",
+                    "price": "Rp. 11.000"
+                },
+                {
+                    "name": "Gule Kambing",
+                    "price": "Rp. 11.000"
+                }
+            ]
+        },
+        {
+            "name": "Pendamping",
+            "items": [
+                {
+                    "name": "Sambal Goreng Kentang Ati",
+                    "price": "Rp. 3.600"
+                },
+                {
+                    "name": "Bali Telor",
+                    "price": "Rp. 3.500"
+                },
+                {
+                    "name": "Cap Cay",
+                    "price": "Rp. 3.500"
+                },
+                {
+                    "name": "Kering Tempe",
+                    "price": "Rp. 2.700"
+                },
+                {
+                    "name": "Urap-urap",
+                    "price": "Rp. 2.500"
+                },
+                {
+                    "name": "Acar Masak",
+                    "price": "Rp. 1.700"
+                },
+                {
+                    "name": "Mie Goreng/Bihun",
+                    "price": "Rp. 2.500"
+                },
+                {
+                    "name": "Krupuk Udang",
+                    "price": "Rp. 1.500"
+                }
+            ]
+        }
+    ]
+}

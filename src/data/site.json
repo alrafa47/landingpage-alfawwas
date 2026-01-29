@@ -1,0 +1,35 @@
+{
+  "name": "Al-Fawwaz Catering",
+  "tagline": "Layanan Aqiqah Premium",
+  "description": "Layanan Aqiqah profesional, syar'i, dan higienis dengan cita rasa masakan Nusantara yang autentik untuk kebahagiaan keluarga.",
+  "whatsapp": "+628155510554",
+  "email": "alfawwazcatering@gmail.com",
+  "phone": "+628155510554",
+  "address": {
+    "street": "Perumahan permata royal garden cluster 1 no F5, Area Persawahan, bunut kidul, Kec. Pakis ",
+    "city": "Kabupaten Malang",
+    "province": "Jawa Timur",
+    "country": "Indonesia",
+    "postalCode": "65154",
+    "googleMapsUrl": "https://maps.app.goo.gl/aYm8Uq7uz1mQtoRR9",
+    "googleMapsEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.340773040402!2d112.6954542758887!3d-7.963691079370032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd629d6d2d8cf15%3A0xddc6c32f6c07672a!2sAL%20Fawwaz%20Catering%20AQIQAH!5e0!3m2!1sen!2sus!4v1769668812097!5m2!1sen!2sus"
+  },
+  "socialLinks": {
+    "facebook": "https://facebook.com/alfawwazcatering",
+    "instagram": "https://instagram.com/alfawwazcatering",
+    "tiktok": "https://www.tiktok.com/@alfawwazcatering?_r=1&_t=ZS-93T7cbKv0Lc"
+  },
+  "copyright": "© 2026 Al-Fawwaz Catering. All Rights Reserved.",
+  "trustedBy": "1000+",
+  "rating": {
+    "score": 4.9,
+    "totalReviews": "5000+",
+    "breakdown": {
+      "5": 92,
+      "4": 6,
+      "3": 2,
+      "2": 0,
+      "1": 0
+    }
+  }
+}

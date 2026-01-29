@@ -1,0 +1,93 @@
+{
+    "sectionTitle": "Pilihan Paket Nasi Kotak",
+    "sectionSubtitle": "Pilihlah sesuai budget atau selera anda",
+    "packages": [
+        {
+            "id": "biasa",
+            "name": "Nasi Kotak Biasa",
+            "price": "Rp. 18.500",
+            "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBQ9ixWxvK-syt_S62Xlrrawv5qJpbrw855cuv9nrcHsFzQCeckvArGjlymU-GpQ6LJHcvpjp4LMP9aH8IlevW6rxbttSTZGrBRA2rGzV6x7sNdK4r9rSLtM9XtzDTekCsjy4wcB1KIiU5z5MyLumqMsTdChyCUAskpRseOklZsdx728SXKmObg7mLUdDGTVDe2mn_ZnMB1G2-68_VlLTIX5w4VBP_E0eY9gFM_oKxiXnljA6YiBT0ZwwMKXnUiK_vsqREqWis2",
+            "isPopular": false,
+            "options": [
+                {
+                    "items": [
+                        "Nasi Putih",
+                        "Ayam Goreng",
+                        "Acar Kuning",
+                        "Mie Goreng",
+                        "Sambal",
+                        "Timun"
+                    ]
+                },
+                {
+                    "items": [
+                        "Nasi Kuning",
+                        "Ayam Bali",
+                        "Bihun Goreng",
+                        "Sambal",
+                        "Timun",
+                        "Kerupuk"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "spesial",
+            "name": "Nasi Kotak Spesial",
+            "price": "Rp. 22.500",
+            "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBQ9ixWxvK-syt_S62Xlrrawv5qJpbrw855cuv9nrcHsFzQCeckvArGjlymU-GpQ6LJHcvpjp4LMP9aH8IlevW6rxbttSTZGrBRA2rGzV6x7sNdK4r9rSLtM9XtzDTekCsjy4wcB1KIiU5z5MyLumqMsTdChyCUAskpRseOklZsdx728SXKmObg7mLUdDGTVDe2mn_ZnMB1G2-68_VlLTIX5w4VBP_E0eY9gFM_oKxiXnljA6YiBT0ZwwMKXnUiK_vsqREqWis2",
+            "isPopular": true,
+            "options": [
+                {
+                    "items": [
+                        "Nasi Putih",
+                        "Ayam Bakar",
+                        "Cap Cay",
+                        "Mie Goreng",
+                        "Sambal",
+                        "Telor Bali"
+                    ]
+                },
+                {
+                    "items": [
+                        "Nasi Kuning",
+                        "Ayam Goreng",
+                        "Kering Tempe",
+                        "Bihun Goreng",
+                        "Sambal",
+                        "Buah"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "istimewa",
+            "name": "Nasi Kotak Istimewa",
+            "price": "Rp. 27.500",
+            "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBQ9ixWxvK-syt_S62Xlrrawv5qJpbrw855cuv9nrcHsFzQCeckvArGjlymU-GpQ6LJHcvpjp4LMP9aH8IlevW6rxbttSTZGrBRA2rGzV6x7sNdK4r9rSLtM9XtzDTekCsjy4wcB1KIiU5z5MyLumqMsTdChyCUAskpRseOklZsdx728SXKmObg7mLUdDGTVDe2mn_ZnMB1G2-68_VlLTIX5w4VBP_E0eY9gFM_oKxiXnljA6YiBT0ZwwMKXnUiK_vsqREqWis2",
+            "isPopular": false,
+            "options": [
+                {
+                    "items": [
+                        "Nasi Putih",
+                        "Daging Sapi",
+                        "Cap Cay",
+                        "Mie Goreng",
+                        "Sambal",
+                        "Udang Krispi"
+                    ]
+                },
+                {
+                    "items": [
+                        "Nasi Kebuli",
+                        "Sate Kambing",
+                        "Gule",
+                        "Acar",
+                        "Sambal",
+                        "Buah & Puding"
+                    ]
+                }
+            ]
+        }
+    ]
+}
