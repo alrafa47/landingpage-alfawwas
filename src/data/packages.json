@@ -16,7 +16,9 @@
                 "250 Tusuk Sate",
                 "60 Porsi Gule",
                 "Penyembelihan Syar'i",
-                "Sertifikat Aqiqah"
+                "Sertifikat Aqiqah",
+                "Acar",
+                "Sambal kecap & Jeruk nipis"
             ],
             "buttonText": "Pilih Biasa"
         },
@@ -31,7 +33,9 @@
                 "350 Tusuk Sate",
                 "75 Porsi Gule",
                 "Penyembelihan Syar'i",
-                "Sertifikat Aqiqah"
+                "Sertifikat Aqiqah",
+                "Acar",
+                "Sambal kecap & Jeruk nipis"
             ],
             "buttonText": "Pilih Ekonomi"
         },
@@ -45,7 +49,9 @@
                 "450 Tusuk Sate",
                 "100 Porsi Gule",
                 "Penyembelihan Syar'i",
-                "Sertifikat Aqiqah"
+                "Sertifikat Aqiqah",
+                "Acar",
+                "Sambal kecap & Jeruk nipis"
             ],
             "buttonText": "Pilih Spesial"
         },
@@ -59,7 +65,9 @@
                 "600 Tusuk Sate",
                 "125 Porsi Gule",
                 "Penyembelihan Syar'i",
-                "Sertifikat Aqiqah"
+                "Sertifikat Aqiqah",
+                "Acar",
+                "Sambal kecap & Jeruk nipis"
             ],
             "buttonText": "Pilih Super"
         }

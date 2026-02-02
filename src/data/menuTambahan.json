@@ -1,0 +1,42 @@
+{
+    "sectionTitle": "Menu Masakan yang Kami Tawarkan",
+    "sectionSubtitle": "Pilihan hidangan terbaik dengan bahan-bahan premium dan bumbu rempah pilihan untuk kebahagiaan aqiqah buah hati Anda",
+    "items": [
+        {
+            "id": "sate-bakar",
+            "name": "Sate Bakar",
+            "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBQ9ixWxvK-syt_S62Xlrrawv5qJpbrw855cuv9nrcHsFzQCeckvArGjlymU-GpQ6LJHcvpjp4LMP9aH8IlevW6rxbttSTZGrBRA2rGzV6x7sNdK4r9rSLtM9XtzDTekCsjy4wcB1KIiU5z5MyLumqMsTdChyCUAskpRseOklZsdx728SXKmObg7mLUdDGTVDe2mn_ZnMB1G2-68_VlLTIX5w4VBP_E0eY9gFM_oKxiXnljA6YiBT0ZwwMKXnUiK_vsqREqWis2",
+            "description": "Sate bakar dengan bumbu khas"
+        },
+        {
+            "id": "krengsengan",
+            "name": "Krengsengan",
+            "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBQ9ixWxvK-syt_S62Xlrrawv5qJpbrw855cuv9nrcHsFzQCeckvArGjlymU-GpQ6LJHcvpjp4LMP9aH8IlevW6rxbttSTZGrBRA2rGzV6x7sNdK4r9rSLtM9XtzDTekCsjy4wcB1KIiU5z5MyLumqMsTdChyCUAskpRseOklZsdx728SXKmObg7mLUdDGTVDe2mn_ZnMB1G2-68_VlLTIX5w4VBP_E0eY9gFM_oKxiXnljA6YiBT0ZwwMKXnUiK_vsqREqWis2",
+            "description": "Krengsengan pedas gurih"
+        },
+        {
+            "id": "tongseng-kambing",
+            "name": "Tongseng Kambing",
+            "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBQ9ixWxvK-syt_S62Xlrrawv5qJpbrw855cuv9nrcHsFzQCeckvArGjlymU-GpQ6LJHcvpjp4LMP9aH8IlevW6rxbttSTZGrBRA2rGzV6x7sNdK4r9rSLtM9XtzDTekCsjy4wcB1KIiU5z5MyLumqMsTdChyCUAskpRseOklZsdx728SXKmObg7mLUdDGTVDe2mn_ZnMB1G2-68_VlLTIX5w4VBP_E0eY9gFM_oKxiXnljA6YiBT0ZwwMKXnUiK_vsqREqWis2",
+            "description": "Tongseng kambing dengan sayuran segar"
+        },
+        {
+            "id": "sate-komoh",
+            "name": "Sate Komoh",
+            "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBQ9ixWxvK-syt_S62Xlrrawv5qJpbrw855cuv9nrcHsFzQCeckvArGjlymU-GpQ6LJHcvpjp4LMP9aH8IlevW6rxbttSTZGrBRA2rGzV6x7sNdK4r9rSLtM9XtzDTekCsjy4wcB1KIiU5z5MyLumqMsTdChyCUAskpRseOklZsdx728SXKmObg7mLUdDGTVDe2mn_ZnMB1G2-68_VlLTIX5w4VBP_E0eY9gFM_oKxiXnljA6YiBT0ZwwMKXnUiK_vsqREqWis2",
+            "description": "Sate komoh khas tradisional"
+        },
+        {
+            "id": "sate-ayam",
+            "name": "Sate Ayam",
+            "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBQ9ixWxvK-syt_S62Xlrrawv5qJpbrw855cuv9nrcHsFzQCeckvArGjlymU-GpQ6LJHcvpjp4LMP9aH8IlevW6rxbttSTZGrBRA2rGzV6x7sNdK4r9rSLtM9XtzDTekCsjy4wcB1KIiU5z5MyLumqMsTdChyCUAskpRseOklZsdx728SXKmObg7mLUdDGTVDe2mn_ZnMB1G2-68_VlLTIX5w4VBP_E0eY9gFM_oKxiXnljA6YiBT0ZwwMKXnUiK_vsqREqWis2",
+            "description": "Sate ayam bumbu kacang"
+        },
+        {
+            "id": "gule-kambing",
+            "name": "Gule Kambing",
+            "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBQ9ixWxvK-syt_S62Xlrrawv5qJpbrw855cuv9nrcHsFzQCeckvArGjlymU-GpQ6LJHcvpjp4LMP9aH8IlevW6rxbttSTZGrBRA2rGzV6x7sNdK4r9rSLtM9XtzDTekCsjy4wcB1KIiU5z5MyLumqMsTdChyCUAskpRseOklZsdx728SXKmObg7mLUdDGTVDe2mn_ZnMB1G2-68_VlLTIX5w4VBP_E0eY9gFM_oKxiXnljA6YiBT0ZwwMKXnUiK_vsqREqWis2",
+            "description": "Gule kambing kuah kental"
+        }
+    ]
+}

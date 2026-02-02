@@ -1,0 +1,42 @@
+{
+    "sectionTitle": "Menu Masakan yang Kami Tawarkan",
+    "sectionSubtitle": "Berbagai pilihan masakan lezat untuk melengkapi acara Anda",
+    "items": [
+        {
+            "id": "sate-bakar",
+            "name": "Sate Bakar",
+            "image": "/images/menu/sate.png",
+            "description": "Sate daging pilihan dibakar dengan bumbu kacang spesial"
+        },
+        {
+            "id": "krengsengan",
+            "name": "Krengsengan",
+            "image": "/images/menu/krengsengan.png",
+            "description": "Daging sapi bumbu kecap dengan cita rasa khas Jawa"
+        },
+        {
+            "id": "tongseng-kambing",
+            "name": "Tongseng Kambing",
+            "image": "/images/menu/tongseng.png",
+            "description": "Tongseng kambing dengan kuah gurih dan sayuran segar"
+        },
+        {
+            "id": "sate-komoh",
+            "name": "Sate Komoh",
+            "image": "/images/menu/sate-komoh.png",
+            "description": "Sate khas dengan bumbu komoh yang kaya rempah"
+        },
+        {
+            "id": "soto-kambing",
+            "name": "Soto Kambing",
+            "image": "/images/menu/soto-kambing.png",
+            "description": "Soto kambing dengan kuah gurih dan sayuran segar"
+        },
+        {
+            "id": "gule-kambing",
+            "name": "Gule Kambing",
+            "image": "/images/menu/gule-kambing.png",
+            "description": "Gulai kambing dengan kuah santan kental dan rempah pilihan"
+        }
+    ]
+}

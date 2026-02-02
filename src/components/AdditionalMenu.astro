@@ -82,7 +82,29 @@ import site from '../data/site.json';
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.3em;
-    color: var(--color-text-secondary);
+    color: var(--color-sage);
+  }
+  
+  .section-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    margin-top: 1rem;
+  }
+  
+  .section-divider .dot {
+    width: 4px;
+    height: 4px;
+    background: var(--color-gold);
+    border-radius: 50%;
+  }
+  
+  .section-divider .line {
+    width: 3rem;
+    height: 4px;
+    background: var(--color-gold);
+    border-radius: 2px;
   }
   
   .menu-grid {
@@ -126,7 +148,7 @@ import site from '../data/site.json';
   .menu-item-price {
     flex-shrink: 0;
     font-weight: 700;
-    color: var(--color-gold);
+    color: #A68446;
     width: 6rem;
     text-align: right;
   }

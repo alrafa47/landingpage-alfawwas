@@ -1,0 +1,17 @@
+{
+    "sectionTitle": "LAYANAN KAMI",
+    "services": [
+        {
+            "id": "aqiqah",
+            "name": "AQIQAH",
+            "image": "/images/services/aqiqah.png",
+            "link": "/paket"
+        },
+        {
+            "id": "nasi-kotak",
+            "name": "NASI KOTAK",
+            "image": "/images/services/naskot.png",
+            "link": "/nasi-kotak"
+        }
+    ]
+}

@@ -6,7 +6,7 @@
             "id": "biasa",
             "name": "Nasi Kotak Biasa",
             "price": "Rp. 18.500",
-            "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBQ9ixWxvK-syt_S62Xlrrawv5qJpbrw855cuv9nrcHsFzQCeckvArGjlymU-GpQ6LJHcvpjp4LMP9aH8IlevW6rxbttSTZGrBRA2rGzV6x7sNdK4r9rSLtM9XtzDTekCsjy4wcB1KIiU5z5MyLumqMsTdChyCUAskpRseOklZsdx728SXKmObg7mLUdDGTVDe2mn_ZnMB1G2-68_VlLTIX5w4VBP_E0eY9gFM_oKxiXnljA6YiBT0ZwwMKXnUiK_vsqREqWis2",
+            "image": "/images/naskot/naskot1.png",
             "isPopular": false,
             "options": [
                 {
@@ -35,7 +35,7 @@
             "id": "spesial",
             "name": "Nasi Kotak Spesial",
             "price": "Rp. 22.500",
-            "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBQ9ixWxvK-syt_S62Xlrrawv5qJpbrw855cuv9nrcHsFzQCeckvArGjlymU-GpQ6LJHcvpjp4LMP9aH8IlevW6rxbttSTZGrBRA2rGzV6x7sNdK4r9rSLtM9XtzDTekCsjy4wcB1KIiU5z5MyLumqMsTdChyCUAskpRseOklZsdx728SXKmObg7mLUdDGTVDe2mn_ZnMB1G2-68_VlLTIX5w4VBP_E0eY9gFM_oKxiXnljA6YiBT0ZwwMKXnUiK_vsqREqWis2",
+            "image": "/images/naskot/naskot1.png",
             "isPopular": true,
             "options": [
                 {
@@ -64,7 +64,7 @@
             "id": "istimewa",
             "name": "Nasi Kotak Istimewa",
             "price": "Rp. 27.500",
-            "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBQ9ixWxvK-syt_S62Xlrrawv5qJpbrw855cuv9nrcHsFzQCeckvArGjlymU-GpQ6LJHcvpjp4LMP9aH8IlevW6rxbttSTZGrBRA2rGzV6x7sNdK4r9rSLtM9XtzDTekCsjy4wcB1KIiU5z5MyLumqMsTdChyCUAskpRseOklZsdx728SXKmObg7mLUdDGTVDe2mn_ZnMB1G2-68_VlLTIX5w4VBP_E0eY9gFM_oKxiXnljA6YiBT0ZwwMKXnUiK_vsqREqWis2",
+            "image": "/images/naskot/naskot1.png",
             "isPopular": false,
             "options": [
                 {
